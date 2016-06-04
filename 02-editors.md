@@ -68,6 +68,16 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> I will use Vim as graphical editor. This will allow me to use same editor across both graphical and non-graphical environments. 
+>> I will use Vim as graphical editor. This will allow me to use same editor across both graphical and non-graphical environments. I am new to this editor. However, I have found help command and split windows features very interesting. Some Useful Keyboard Shortcuts for my editor are as follows:
+0 - move cursor to the beginning of the line
+$ - move cursor to the end of the line 
+( - jumps to the next sentence 
+) - jumps to the previous sentence
+x - delete charecter at the cursor
+dw - delete a word
+u - undo last operation 
+
+We can customize Vim by editing vim configuration file (dotfile)
+
 
  
