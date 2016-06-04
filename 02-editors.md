@@ -76,7 +76,6 @@ $ - move cursor to the end of the line
 x - delete charecter at the cursor
 dw - delete a word
 u - undo last operation 
-
 We can customize Vim by editing vim configuration file (dotfile)
 
 
