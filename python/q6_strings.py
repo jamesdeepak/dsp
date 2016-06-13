@@ -3,6 +3,12 @@
 
 
 def donuts(count):
+    if count< 10:
+        print('Number of donuts:', count)
+        
+    else:
+        print('Number of donuts: many')
+        
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -22,6 +28,12 @@ def donuts(count):
 
 
 def both_ends(s):
+    if len(s) <2:
+        print('')
+    else:
+        a = s[:2]
+        b = s[-2:]
+        print(a+b)
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -41,6 +53,13 @@ def both_ends(s):
 
 
 def fix_start(s):
+    if len(s) <1:
+        print('')
+    else:
+        firstchar = s[0]
+        modStr = s[1:].replace(firstchar,'*')
+        print(firstchar + modStr)
+        
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -60,6 +79,9 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    newStr =  b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+    print(newStr)
+    
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
@@ -78,6 +100,13 @@ def mix_up(a, b):
 
 
 def verbing(s):
+    if len(s) < 3:
+        print(s)
+    else:
+        if s[-3:] =='ing':
+            print(s + 'ly')
+        else:
+            print(s+'ing')
     """
     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
@@ -95,6 +124,15 @@ def verbing(s):
 
 
 def not_bad(s):
+    a = 'not'
+    b = 'bad'
+    fInd = s.find(a)
+    sInd = s.find(b)
+    if a in s and b in s[fInd:]:
+        print(s[:fInd] + 'good' + s[sInd+3:])
+    else:
+        print(s)
+        
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
@@ -115,6 +153,23 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    if len(a)%2 == 0:
+        midIndA = int(len(a)/2)
+    else:
+        midIndA = int(len(a)//2) + 1
+
+    if len(b)%2 == 0:
+        midIndB = int(len(b)/2)
+    else:
+        midIndB = int(len(b)//2) + 1
+        
+    aFront = a[:midIndA]
+    aBack = a[midIndA:]
+    bFront = b[:midIndB]
+    bBack = b[midIndB:]
+     
+    print(aFront + bFront + aBack + bBack)
+    
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
