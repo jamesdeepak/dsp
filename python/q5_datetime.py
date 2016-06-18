@@ -41,5 +41,5 @@ print(a.date())
 print(b.date())
 
 diff = b.date() - a.date()
-print(diff)
+print(diff) 
 
